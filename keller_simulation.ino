@@ -129,7 +129,7 @@ void requestEvent() {
 
 //Convertion of pressure to bars
 float pressureInBars(uint16_t pressure) {
-  float pressureInBars = (float)(pressure - 16384) / 32768 * 20;
+  float pressureInBars = (float)((int32_t)pressure - 16384) / 32768 * 20;
   return pressureInBars;
 }
 
