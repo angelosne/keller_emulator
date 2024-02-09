@@ -135,7 +135,7 @@ float pressureInBars(uint16_t pressure) {
 
 //Conversion of temperature to Celcius
 float temperatureInCelcius(uint16_t temperature) {
-  float temperatureInCelcius = (float)(temperature - 16384) / 32768 * 20;
+  float temperatureInCelcius = (float)(((int32_t)temperature - 384) * 0.003125) - 50;
   return temperatureInCelcius;
 }
 
